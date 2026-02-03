@@ -18,4 +18,22 @@ int main(){
 	return 0;
 }
 
-//Do not modify source code above this line
+void shuffle(int &w ,int &x ,int &y ,int &z){
+    int data[] = {w , x , y , z};
+    int N = 4;
+    for(int j = 0 ; j < N ; j++){
+        int R = rand() % N;
+        swap(data[j] , data[R]);
+    }
+    w = data[0];
+    x = data[1];
+    y = data[2];
+    z = data[3];
+    
+}
+
+void swap(int &h , int &k){
+    int temp =  h;
+    h = k;
+    k = temp;
+}
